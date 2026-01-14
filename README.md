@@ -1,16 +1,51 @@
-# React + Vite
+# Inspired Retreats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A luxury travel platform connecting discerning travelers with the world's most exclusive wellness and adventure retreats. 
 
-Currently, two official plugins are available:
+![Project Banner](https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## React Compiler
+**Inspired Retreats** is a high-fidelity React application designed to showcase a curated portfolio of premium venues (Aman, Six Senses, Singita, etc.). The project emphasizes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Visual Excellence**: Minimalist design, sophisticated typography (Montserrat & Cormorant Garamond), and gold-tier aesthetics.
+-   **Interactive Discovery**: A custom stylized world map and dynamic filtering system.
+-   **Seamless Booking**: A global "concierge" booking modal accessible from any venue.
+-   **Responsiveness**: Fully optimized for mobile, tablet, and desktop experiences.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   **Frontend**: React (Vite)
+-   **Styling**: Tailwind CSS
+-   **Animations**: Framer Motion
+-   **Icons**: Lucide React
+-   **Navigation**: React Router DOM
+
+## Key Features
+
+-   **Curated Venues**: A grid of ~50 hand-picked properties with filtering by category (Wellness, Adventure, Design, etc.).
+-   **Interactive Map**: A custom SVG map visualizing venue locations globally.
+-   **Booking Concierge**: A pervasive modal (`BookingContext`) for inquiries, pre-filling venue details.
+-   **Journal**: A fully realized editorial section with mixed-layout articles.
+-   **Responsive Navigation**: Smooth mobile menu transitions and scroll-aware headers.
+
+## Getting Started
+
+1.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+2.  **Run Development Server**
+    ```bash
+    npm run dev
+    ```
+
+3.  **Build for Production**
+    ```bash
+    npm run build
+    ```
+
+---
+
+*Designed with ❤️ for the modern seeker.*
