@@ -249,7 +249,8 @@ export const retreatsData = [
         specialTouch: "A traditional 'Mate' ceremony with local Gauchos, learning the etiquette and history of this communal drink.",
         charity: {
             name: "Reforest Patagonia",
-        },
+        }
+    },
     {
         id: 'sacred-water',
         title: "Sacred Water",
