@@ -3,12 +3,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from './Logo';
-import BookingModal from './BookingModal';
+import { useBooking } from '../context/BookingContext';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isBookingOpen, setIsBookingOpen] = useState(false);
+    const { openModal } = useBooking(); // Use Global Context
     const location = useLocation();
     const isHome = location.pathname === '/';
 
@@ -30,9 +30,8 @@ const Navbar = () => {
 
     // Text Color: White ONLY if Home AND Not Scrolled. Else Charcoal.
     const textColorClass = isTransparent ? 'text-white' : 'text-aman-charcoal';
-    const borderColorClass = isTransparent ? 'border-white' : 'border-aman-charcoal';
 
-    const linkClasses = `text-sm uppercase tracking-widest hover:text-aman-gold transition-colors duration-300 ${textColorClass}`;
+    const linkClasses = `text-sm uppercase tracking-widest hover:text-aman-gold transition-colors duration-300 cursor-pointer ${textColorClass}`;
 
     return (
         <>
@@ -50,7 +49,7 @@ const Navbar = () => {
                         <Link to="/about" className={linkClasses}>About</Link>
                         <Link to="/destinations" className={linkClasses}>Venues</Link>
                         <Link to="/retreats" className={linkClasses}>Retreats</Link>
-                        <button onClick={() => setIsBookingOpen(true)} className={linkClasses}>Start a Project</button>
+                        <button onClick={() => openModal({ venueName: 'General Inquiry' })} className={linkClasses}>Start a Project</button>
                         <Link to="/journal" className={linkClasses}>Journal</Link>
                     </div>
 
@@ -76,11 +75,11 @@ const Navbar = () => {
                                 <Link to="/about" className="text-2xl font-serif text-aman-charcoal" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
                                 <Link to="/destinations" className="text-2xl font-serif text-aman-charcoal" onClick={() => setIsMobileMenuOpen(false)}>Venues</Link>
                                 <Link to="/retreats" className="text-2xl font-serif text-aman-charcoal" onClick={() => setIsMobileMenuOpen(false)}>Retreats</Link>
-                                <button onClick={() => { setIsBookingOpen(true); setIsMobileMenuOpen(false); }} className="text-2xl font-serif text-aman-charcoal">Start a Project</button>
+                                <button onClick={() => { openModal({ venueName: 'General Inquiry' }); setIsMobileMenuOpen(false); }} className="text-2xl font-serif text-aman-charcoal">Start a Project</button>
                                 <Link to="/journal" className="text-2xl font-serif text-aman-charcoal" onClick={() => setIsMobileMenuOpen(false)}>Journal</Link>
                             </div>
                             <button
-                                onClick={() => { setIsMobileMenuOpen(false); setIsBookingOpen(true); }}
+                                onClick={() => { setIsMobileMenuOpen(false); openModal({ venueName: 'General Inquiry' }); }}
                                 className="mt-8 border border-aman-charcoal px-8 py-3 text-xs uppercase tracking-widest hover:bg-aman-charcoal hover:text-white transition-all"
                             >
                                 Enquire Now
@@ -89,7 +88,6 @@ const Navbar = () => {
                     )}
                 </AnimatePresence>
             </nav>
-            <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
         </>
     );
 };
