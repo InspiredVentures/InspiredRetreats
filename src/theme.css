@@ -1,0 +1,41 @@
+:root {
+  /* Aman Resorts Inspired Palette */
+  /* Colors extracted from Aman visual identity: natural stone, warm wood, soft sunlight */
+  --primary-color: #4A4036;
+  /* Warm Charcoal/Dark Earth */
+  --secondary-color: #8C8474;
+  /* Stone Grey/Beige */
+  --accent-color: #C2B280;
+  /* Muted Gold/Sand */
+
+  --background-color: #F4F1EA;
+  /* Cream/Off-white paper texture feel */
+  --surface-color: #FFFFFF;
+
+  --text-primary: #333333;
+  --text-secondary: #6B6B6B;
+
+  /* Typography - Sophisticated Serif dominant */
+  --heading-font: 'Playfair Display', serif;
+  /* Closest free match to their bespoke serif */
+  --body-font: 'Lato', sans-serif;
+  /* Clean geometric sans for readability */
+
+  /* Spacing - Generous breathing room */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+  /* Aman is known for space */
+
+  /* Border Radius - Sharper, more architectural */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+
+  /* Shadows - Very subtle or none (flat luxury) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
